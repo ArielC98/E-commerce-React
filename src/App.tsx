@@ -1,10 +1,21 @@
+import { Route, RouterProvider, Routes } from "react-router-dom";
+import { MainLayout } from "./layouts/MainLayout";
+import { Home } from "./pages/Home";
+import { Shop } from "./pages/Shop";
+import { Cart } from "./pages/Cart";
+import { router } from "./routes";
+
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">
-        ¡ReactCommerce con TypeScript está listo!
-      </h1>
-    </div>
+
+    // <MainLayout>
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/shop" element={<Shop />} />
+    //     <Route path="/cart" element={<Cart />} />
+    //   </Routes>
+    // </MainLayout>
+    <RouterProvider router = {router}/>
   );
 }
 
