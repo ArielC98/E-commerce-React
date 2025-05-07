@@ -19,7 +19,7 @@ export const Cart = () => {
             {cart.map((item) => (
               <li key={item.id} className="flex items-center justify-between border-b pb-2">
                 <div>
-                  <h2 className="text-lg font-semibold">{item.name}</h2>
+                  <h2 className="text-lg font-semibold">{item.title}</h2>
                   <p className="text-gray-600">Cantidad: {item.quantity}</p>
                   <p className="text-gray-600">
                     Precio total: ${(item.price * item.quantity).toFixed(2)}

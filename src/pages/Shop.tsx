@@ -1,10 +1,23 @@
 
+import { useState, useEffect } from "react";
 import { useCartStore } from "../data/cart";
-import { products } from "../data/products";
+import { type Product } from "../types/Product";
+import { fetchProducts } from "../services/products";
 
 export const Shop = () => {
 
   const addToCart = useCartStore((state) => state.addToCart);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProducts()
+      .then(setProducts)
+      .catch((err) => console.error(err))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <p className="text-center mt-4">Cargando productos...</p>;
 
   return (
     <div>
@@ -13,9 +26,14 @@ export const Shop = () => {
         {products.map((product) => (
           <div key={product.id} className="border p-4 rounded-lg shadow hover:shadow-lg transition">
             <div className="flex justify-center">
-              <img src={product.image} alt={product.name} className="w-40 h-40 object-cover mb-4 rounded" />
+              <img src={product.image} alt={product.title} className="w-full h-40 object-contain mb-2 rounded" />
             </div>
-            <h2 className="text-xl font-semibold">{product.name}</h2>
+            <h3
+              className="font-medium text-md truncate"
+              title={product.title}
+            >
+              {product.title}
+            </h3>
             <p className="text-gray-600">${product.price.toFixed(2)}</p>
             <button
               onClick={() => addToCart(product)}
