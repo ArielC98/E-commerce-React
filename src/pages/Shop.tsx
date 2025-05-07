@@ -26,7 +26,7 @@ export const Shop = () => {
         {products.map((product) => (
           <div key={product.id} className="border p-4 rounded-lg shadow hover:shadow-lg transition">
             <div className="flex justify-center">
-              <img src={product.image} alt={product.title} className="w-full h-40 object-contain mb-2 rounded" />
+              <img src={product.thumbnail} alt={product.title} className="w-full h-40 object-contain mb-2 rounded" />
             </div>
             <h3
               className="font-medium text-md truncate"
