@@ -11,16 +11,16 @@ type LucideIconName =
 // Mapea cada categoría a su icono
 const categoryIcons: Record<string, LucideIconName> = {
   "Beauty": "wand",
-  "Fragances": "milk",
+  "Fragrances": "milk",
   "Furniture": "sofa",
   "Groceries": "apple",
   "Home Decoration": "lamp",
-  "Kitchen Accesories": "cooking-pot",
+  "Kitchen Accessories": "cooking-pot",
   "Laptops": "laptop",
   "Mens Shirts": "shirt",
   "Mens Shoes": "plane-landing",
   "Mens Watches": "timer",
-  "Mobile Accesories": "smartphone-charging",
+  "Mobile Accessories": "smartphone-charging",
   "Motorcycle": "bike",
   "Skin Care": "smile",
   "Smartphones": "smartphone",
@@ -31,7 +31,7 @@ const categoryIcons: Record<string, LucideIconName> = {
   "Vehicle": "car",
   "Womens Bags": "briefcase-business",
   "Womens Dresses": "tree-pine",
-  "Womens Jewerlly": "gem",
+  "Womens Jewellery": "gem",
   "Womens Shoes": "footprints",
   "Womens Watches": "watch",
 };

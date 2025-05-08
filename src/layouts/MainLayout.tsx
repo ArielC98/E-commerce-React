@@ -11,11 +11,11 @@ export const MainLayout = ({children}: Props) => {
       {/* Navbar */}
       <header className="bg-white shadow">
         <nav className="container mx-auto flex justify-between items-center p-4">
-          <h1 className="text-2xl font-bold text-blue-600">Mi eCommerce</h1>
+          <h1 className="text-2xl font-bold text-blue-600">My eCommerce</h1>
           <ul className="flex space-x-4 text-lg">
-            <li><Link to="/" className="hover:text-blue-600">Inicio</Link></li>
-            <li><Link to="/shop" className="hover:text-blue-600">Tienda</Link></li>
-            <li><Link to="/cart" className="hover:text-blue-600">Carrito</Link></li>
+            <li><Link to="/" className="hover:text-blue-600">Home</Link></li>
+            <li><Link to="/shop" className="hover:text-blue-600">Shop</Link></li>
+            <li><Link to="/cart" className="hover:text-blue-600">Cart</Link></li>
           </ul>
         </nav>
       </header>
@@ -27,7 +27,7 @@ export const MainLayout = ({children}: Props) => {
 
       {/* Footer */}
       <footer className="bg-gray-100 text-center py-4 mt-8 text-gray-600">
-        © 2025 Mi eCommerce. Todos los derechos reservados.
+        © 2025 My eCommerce. All rights reserved.
       </footer>
     </div>
   )
